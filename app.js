@@ -38,26 +38,26 @@ switch (obj.timeOfDay) { // use this instead of writing loads of if and else sta
     break; // stop running switch statement
   default: // means if non of the cases are met
     alert (`${obj.playerName}, you know what, you aren't taking this seriously. Let's move on.`);
-}
+  }
 
-if (obj.timeOfDay == "day" || obj.timeOfDay == "Day") {
-  arr.unshift ("DAY");
+if (obj.timeOfDay === "day" || obj.timeOfDay === "Day") {
+  time.unshift ("DAY");
   console.log(time[0]);
-} else if (obj.timeOfDay == "night" || obj.timeOfDay == "Night") {
-  arr.shift ();
-  arr.unshift ("NIGHT");
+} if (obj.timeOfDay === "night" || obj.timeOfDay === "Night") {
+  time.shift ();
+  time.unshift ("NIGHT");
   console.log(time[0]);
 }
 
 choices.chs1 = prompt ("You hear a figure approaching in the distance. What do you do? 1 for RUN AWAY, 2 for WAIT)");
 
-if (time[0] === "DAY" && choices.chs1 == 1) {
+if (time[0] === "DAY" && choices.chs1 === "1") {
   alert ("This is why you don't adventure at night.");
   alert ("Whilst running you tripped and fell over a tree trunk. You're hurt. You can no longer run.");
-} else if (time[0] === "NIGHT" && choices.chs1 == 1) {
+} else if (time[0] === "NIGHT" && choices.chs1 == "1") {
   alert ("You ran? But you could see the figure... oh well.");
   alert ("You're now by a wide river. The current looks fast. The water looks strange.");
-} else if (choices.chs1 == 2) {
+} else if (choices.chs1 == "2") {
   alert ("You wait for the figure to approach you... IT'S A BEAR!");
 } else {
   alert (`${obj.playerName}, you know what, you aren't taking this seriously. Let's move on.`);
