@@ -7,9 +7,9 @@ obj.playerName = prompt ("Hi, what's your name?");
 if (obj.playerName.length < 5) {
   alert ("I don't like your name. I'm gonna call you Chris. Much better.");
   obj.playerName = "Chris";
-  document.getElementById("demo").innerHTML = obj.playerName;
 }
 
+document.getElementById("name").innerHTML = obj.playerName;
 console.log(obj.playerName);
 
 obj.playerAge = prompt (`Welcome ${obj.playerName}, I'm bleep bloop bleep but you can call me Triple B. So how old are you?`);
@@ -22,6 +22,7 @@ if (obj.playerAge <= 22) {
  prompt ("Wanna go on an adventure?");
 }
 
+document.getElementById("age").innerHTML = obj.playerAge;
 console.log(obj.playerAge);
 
 alert ("The illusion of choice is a beautiful thing. LETS GO!");
