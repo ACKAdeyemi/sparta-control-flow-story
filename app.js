@@ -7,6 +7,7 @@ obj.playerName = prompt ("Hi, what's your name?");
 if (obj.playerName.length < 5) {
   alert ("I don't like your name. I'm gonna call you Chris. Much better.");
   obj.playerName = "Chris";
+  document.getElementById("demo").innerHTML = obj.playerName;
 }
 
 console.log(obj.playerName);
@@ -51,10 +52,10 @@ if (obj.timeOfDay === "day" || obj.timeOfDay === "Day") {
 
 choices.chs1 = prompt ("You hear a figure approaching in the distance. What do you do? 1 for RUN AWAY, 2 for WAIT)");
 
-if (time[0] === "DAY" && choices.chs1 === "1") {
+if (time[0] === "NIGHT" && choices.chs1 === "1") {
   alert ("This is why you don't adventure at night.");
   alert ("Whilst running you tripped and fell over a tree trunk. You're hurt. You can no longer run.");
-} else if (time[0] === "NIGHT" && choices.chs1 == "1") {
+} else if (time[0] === "DAY" && choices.chs1 == "1") {
   alert ("You ran? But you could see the figure... oh well.");
   alert ("You're now by a wide river. The current looks fast. The water looks strange.");
 } else if (choices.chs1 == "2") {
